@@ -1,0 +1,634 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 400;
+    font-style: italic;
+    text_decoration: none;
+}
+h2 {
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 400;
+    font-style: normal;
+    text_decoration: none;
+}
+
+
+hr.dotted {
+    border-top: 2px dotted #b6b6b6;
+}
+
+.project_view {
+    padding: 1em;
+}
+.project_view h1 {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 6px;
+}
+
+.project_view h2{
+    padding: 2em;
+}
+
+.project_view p {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 150;
+    font-style: normal;
+    text_decoration: none;
+    font-size: large;
+}
+
+
+a {
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 150;
+    font-style: normal;
+    text_decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.image-container-large img {
+    width: 100%;  /* Make img responsive */
+    height: auto; /* Maintains the user device's aspect ratio */
+    display: block;
+    padding: 4em; /* Fix bug where img spills over outside of page */
+}
+
+.grid_div {
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-item {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.grid-item a, .grid-item a:visited, .grid-item a:hover, .grid-item a:active {
+    text-decoration: none; /* Removes underlines from links */
+    color: inherit;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.2s ease-in-out;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 10px 20px;
+}
+
+.navbar .logo {
+    color: #333;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-links li {
+    margin: 20px 0;
+}
+
+.hero-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff; /* Text color White */
+    background-color: rgba(0, 0, 0, 1);
+    opacity: 0;
+    transition: opacity 0.3s;
+    text-align: center;
+    text-decoration: None;
+}
+
+.grid-item:hover .hero-overlay {
+    opacity: 1;
+}
+
+.grid-item h2 {
+    border-bottom: none; /* Removes any borders that might be interpreted as underlines */
+    text-decoration: none;
+    outline: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates a 3 col layout */
+    gap: 20px; /* Space inbetween cards */
+}
+
+.card {
+    border-radius: 0px; /* Rounded corners for card */
+    padding: 20px;
+}
+
+.card-content {
+    padding-top: 15px;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-text {
+    padding: 15px;
+    font-family: "Sorts Mill Goudy", serif;
+}
+
+.checked {
+    color: orange;
+}
+
+/* CART PAGE */
+.cart-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+.cart-items {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 1%;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-quantity,
+.item-price {
+    font-style: italic;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-btn:hover {
+    background-color: #3b3b3b;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.div-col-1, .div-col-2 {
+    flex: 1 1 50%;
+    box-sizing: border-box;
+    padding: 20px; /* Stop things bunching together */
+}
+
+.cart-product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.cart-product {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.cart-product img {
+    width: 100px;
+    height: auto;
+}
+
+
+.product-info h3, .product-info p {
+    margin: 5px 0;
+}
+
+.product-info-btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 65%;
+}
+
+.product-page-info {
+    padding-top: 15px;
+}
+
+.product-info-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product-info-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info-section div {
+    max-width: 300px;
+}
+
+button {
+    display: block;
+    margin-top: 10px;
+}
+
+.hamburger-menu.button {
+    background: #ffffff;
+}
+
+.product-description, .reviews {
+    padding: 1em;
+}
+.cart-btn {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 75%;
+}
+
+
+/* FONTS */
+.sorts-mill goudy-regular {
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sorts-mill goudy-regular-italic {
+    font-family: "Sorts Mill Goudy", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.footer {
+    margin-top: auto; /* Pushes the footer to the bottom of page */
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+    font-family: "Sorts Mill Goudy", serif;
+}
+
+/*HAMBURGER SIDE NAV MENU*/
+.hamburger-menu {
+    background: #ffffff;
+    border: none;
+    color: #333333;
+    font-size: 24px;
+    cursor: pointer;
+    width: 5%;
+}
+.hamburger-menu:hover {
+    color: #444444;
+}
+
+.navbar-links a {
+    color: #333;
+    text-decoration: none;
+    padding-left: 20px;
+}
+
+.side-nav-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    transition: width 0.5s ease; /* Animate */
+    padding-top: 60px;
+}
+
+.side-nav-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #666666;
+    display: block;
+    transition: 0.3s;
+}
+
+.side-nav-menu a:hover {
+    color: #444444;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+}
+
+.svg-icon-link {
+    display: flex;
+    align-items: center; /* centre SVG icon vertically with the text */
+    justify-content: center;
+    text-decoration: none;
+}
+
+.svg-icon-link img {
+    width: 24px;
+    height: auto;
+    margin-right: 8px;
+}
+
+/*LOGIN PAGE*/
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    margin: auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-outside: 15px;
+}
+
+.button-container {
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #1c1c1c;
+}
+
+.hamburger-button:hover {
+    background-color: #fff;
+}
+
+
+/*ABOUT ME*/
+
+.about-me {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+}
+
+.about-me-profile {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.biography, .contact-info {
+    margin-bottom: 20px;
+}
+
+
+/*ANIMATION*/
+/*Fade Effect*/
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out;
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/*MEDIA QUERIES FOR RESPONSIVE DESIGN*/
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* Switches to a 2-column layout for smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Single column layout for very small screens */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Stops the cards from scaling down to obscenely small sizes when on tablet / mobile */
+    }
+    .project_view h1 {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1em;
+        padding-bottom: 3px;
+    }
+
+    .footer p {
+        font-size: 14px; /* Adjusts the font size for smaller screens */
+    }
+
+}
+
+/* Responsive styling */
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .div-col-1, .div-col-2 {
+        flex-basis: 100%;
+    }
+
+    .div-col-1 { order: 2; } /* Div 1 will be displayed second */
+    .div-col-2 { order: 1; } /* Div 2 will be displayed first */
+
+    .nav-links {
+        display: none; /* Hide the nav links if screen too small*/
+    }
+
+    .nav-links {
+        visibility: hidden;
+    }
+
+    .mobile-hamburger {
+        display: block;
+    }
+
+}
+
+@media (min-width: 1000px) {
+    .mobile-hamburger {
+        display: none; /* Hide hamburger menu */
+    }
+
+    .about-me {
+        padding: 10px;
+    }
+
+    .nav-links {
+        display: flex;
+        visibility: visible;
+    }
+}
+
+
